@@ -1,6 +1,5 @@
 from sklearn.datasets import load_digits
 import pandas as pd
-# %matplotlib inline
 from sklearn.neighbors import KNeighborsClassifier
 import matplotlib.pyplot as plt
 import numpy as np
@@ -35,6 +34,8 @@ test = np.array(digit['data'][1725])
 test1 = test.reshape(1, -1)
 Image_display(1725)
 
-KNN.predict(test1)
+test_y = KNN.predict(test1)
+
+print(test_y)
 
 digit['target_names']
